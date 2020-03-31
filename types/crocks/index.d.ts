@@ -18,6 +18,7 @@ export * from './Identity';
 export * from './IO';
 export * from './Last';
 export * from './List';
+export * from './logic';
 export * from './Max';
 export * from './Maybe';
 export * from './Min';
