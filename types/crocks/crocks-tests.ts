@@ -1,5 +1,5 @@
-import { Async } from "./src/Async";
-import { Either, Left } from "./src/Either";
+import { Async } from "./Async";
+import { Either, Left } from "./Either";
 
 const asyncValue: Async = Async(() => null);
 const racingValue: Async = race(asyncValue);
