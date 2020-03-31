@@ -1,2 +1,6 @@
-import { propEq } from './index';
+/** propEq :: (String | Integer) -> a -> b -> Boolean */
+declare function propEq(prop: string | number, val: unknown, obj: object): boolean;
+declare function propEq(prop: string | number, val: unknown): (obj: object) => boolean;
+declare function propEq(prop: string | number): (val: unknown) => (obj: object) => boolean;
+
 export default propEq;

@@ -1,8 +1,6 @@
-export function hasProp(prop: string | number, val: unknown): boolean;
-export function hasProp(prop: string | number): (val: unknown) => boolean;
+export { default as hasProp } from './hasProp';
 
-export function hasPropPath(path: ReadonlyArray<string | number>, val: unknown): boolean;
-export function hasPropPath(path: ReadonlyArray<string | number>): (val: unknown) => boolean;
+export { default as hasPropPath } from './hasPropPath';
 
 // TODO: requires Foldable
 // export function hasProps(prop: string | number, val: unknown): boolean;
@@ -20,12 +18,12 @@ export function hasPropPath(path: ReadonlyArray<string | number>): (val: unknown
 // TODO: requires Apply
 // export function isApply(val: unknown): val is Apply;
 
-export function isArray(val: unknown): val is Array<any>;
+export { default as isArray } from './isArray';
 
 // TODO: requires Bifunctor
 // export function isBifunctor(val: unknown): val is Bifunctor;
 
-export function isBoolean(val: unknown): val is boolean;
+export { default as isBoolean } from './isBoolean';
 
 // TODO: requires Category
 // export function isCategory(val: unknown): val is Category;
@@ -36,7 +34,7 @@ export function isBoolean(val: unknown): val is boolean;
 // TODO: requires Contravariant
 // export function isContravariant(val: unknown): val is Contravariant;
 
-export function isDate(val: unknown): val is Date;
+export { default as isDate } from './isDate';
 
 // TODO: requires !undefined
 // export function isDefined(val: unknown): val is Defined;
@@ -47,24 +45,23 @@ export function isDate(val: unknown): val is Date;
 // TODO: requires Extend
 // export function isExtend(val: unknown): val is Extend;
 
-export function isFalse(val: unknown): val is false;
+export { default as isFalse } from './isFalse';
 
-// TODO: type union of falsy types is problematic
-export function isFalsy(val: unknown): boolean;
+export { default as isFalsy } from './isFalsy';
 
 // TODO: requires Foldable
 // export function isFoldable(val: unknown): val is Foldable;
 
-export function isFunction(val: unknown): val is Function;
+export { default as isFunction } from './isFunction';
 
 // TODO: requires Functor
 // export function isFunctor(val: unknown): val is Functor;
 
-export function isInteger(val: unknown): boolean;
+export { default as isInteger } from './isInteger';
 
-export function isIterable(val: unknown): val is Iterable;
+export { default as isIterable } from './isIterable';
 
-export function isMap(val: unknown): boolean;
+export { default as isMap } from './isMap';
 
 // TODO: requires Monad
 // export function isMonad(val: unknown): val is Monad;
@@ -72,11 +69,9 @@ export function isMap(val: unknown): boolean;
 // TODO: requires Monoid
 // export function isMonoid(val: unknown): val is Monoid;
 
-export function isNil(val: unknown): val is null;
-
-export function isNumber(val: unknown): val is number;
-
-export function isObject(val: unknown): val is object;
+export { default as isNil } from './isNil'
+export { default as isNumber } from './isNumber'
+export { default as isObject } from './isObject'
 
 // TODO: requires Plus
 // export function isPlus(val: unknown): val is Plus;
@@ -84,13 +79,9 @@ export function isObject(val: unknown): val is object;
 // TODO: requires Profunctor
 // export function isProfunctor(val: unknown): val is Profunctor;
 
-export function isPromise(val: unknown): val is Promise<any>;
-
-export function isSame(val1: unknown, val2: unknown): boolean;
-export function isSame(val1: unknown): (val2: unknown) => boolean;
-
-export function isSameType(val1: unknown, val2: unknown): boolean;
-export function isSameType(val1: unknown): (val2: unknown) => boolean;
+export { default as isPromise } from './isPromise';
+export { default as isSame } from './isSame';
+export { default as isSameType } from './isSameType';
 
 // TODO: requires Semigroup
 // export function isSemigroup(val: unknown): val is Semigroup;
@@ -101,30 +92,21 @@ export function isSameType(val1: unknown): (val2: unknown) => boolean;
 // TODO: requires Setoid
 // export function isSetoid(val: unknown): val is Setoid;
 
-export function isString(val: unknown): val is string;
-
-export function isSymbol(val: unknown): val is Symbol;
+export { default as isString } from './isString';
+export { default as isSymbol } from './isSymbol';
 
 // TODO: requires Traversable
 // export function isTraversable(val: unknown): val is Traversable;
 
-export function isTrue(val: unknown): val is true;
-
-// TODO: type union of truthy types is problematic
-export function isTruthy(val: unknown): boolean;
-
-export function pathEq(path: ReadonlyArray<string | number>, val: unknown, obj: object): boolean;
-export function pathEq(path: ReadonlyArray<string | number>, val: unknown): (obj: object) => boolean;
-export function pathEq(path: ReadonlyArray<string | number>): (val: unknown) => (obj: object) => boolean;
+export { default as isTrue } from './isTrue';
+export { default as isTruthy } from './isTruthy';
+export { default as pathEq } from './pathEq';
+export { default as propEq } from './propEq';
 
 // TODO requires Pred
 // export function pathSatisfies(path: ReadonlyArray<string | number>, pred: (val: any) => boolean | Pred, obj: object): boolean;
 // export function pathSatisfies(path: ReadonlyArray<string | number>, pred: (val: any) => boolean | Pred): (obj: object) => boolean;
 // export function pathSatisfies(path: ReadonlyArray<string | number>): (pred: (val: any) => boolean | Pred) => (obj: object) => boolean;
-
-export function propEq(prop: string | number, val: unknown, obj: object): boolean;
-export function propEq(prop: string | number, val: unknown): (obj: object) => boolean;
-export function propEq(prop: string | number): (val: unknown) => (obj: object) => boolean;
 
 // TODO requires Pred
 // export function propSatisfies(prop: string | number, pred: (val: any) => boolean | Pred, obj: object): boolean;

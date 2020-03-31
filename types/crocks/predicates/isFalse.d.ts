@@ -1,2 +1,3 @@
-import { isFalse } from './index';
+/** isFalse :: a -> boolean */
+declare function isFalse(val: unknown): val is false;
 export default isFalse;

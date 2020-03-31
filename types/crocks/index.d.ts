@@ -23,6 +23,7 @@ export * from './Maybe';
 export * from './Min';
 export * from './Pair';
 export * from './Pred';
+export * from './predicates'
 export * from './Prod';
 export * from './Reader';
 export * from './ReaderT';

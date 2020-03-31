@@ -1,2 +1,3 @@
-import { isFunction } from './index';
+/** isFunction :: a -> boolean */
+declare function isFunction(val: unknown): val is Function;
 export default isFunction;
