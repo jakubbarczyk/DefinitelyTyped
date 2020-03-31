@@ -1,25 +1,14 @@
 import { BinaryFunction, UnaryFunction, VariadicFunction } from '../internal/index';
 
-export function applyTo(val: unknown, fn: VariadicFunction): any;
-export function applyTo(val: unknown): (fn: VariadicFunction) => any;
+export { default as applyTo } from './applyTo';
+export { default as compose2 } from './compose2';
+export { default as composeB } from './composeB';
 
-export function compose2(fn1: BinaryFunction, fn2: UnaryFunction, fn3: UnaryFunction): any;
+export { default as constant } from './constant';
+export { default as converge } from './converge';
 
-export function composeB(fn1: VariadicFunction, fn2: VariadicFunction): UnaryFunction;
+export { default as flip } from './flip';
+export { default as identity } from './identity';
 
-export function constant(val: unknown): () => any;
-
-export function converge(fn1: BinaryFunction, fn2: UnaryFunction, fn3: UnaryFunction): UnaryFunction;
-export function converge(fn1: BinaryFunction, fn2: UnaryFunction): (fn3: UnaryFunction) => UnaryFunction;
-export function converge(fn1: BinaryFunction): (fn2: UnaryFunction) => (fn3: UnaryFunction) => UnaryFunction;
-
-export function flip(fn: VariadicFunction): VariadicFunction;
-
-export function identity<T>(val: T): T;
-
-export function psi(fn1: BinaryFunction, fn2: UnaryFunction): BinaryFunction;
-export function psi(fn1: BinaryFunction): (fn2: UnaryFunction) => BinaryFunction;
-
-export function substitution(fn1: BinaryFunction, fn2: UnaryFunction, val: unknown): any;
-export function substitution(fn1: BinaryFunction, fn2: UnaryFunction): (val: unknown) => any;
-export function substitution(fn1: BinaryFunction): (fn2: UnaryFunction) => (val: unknown) => any;
+export { default as psi } from './psi';
+export { default as substitution } from './substitution';

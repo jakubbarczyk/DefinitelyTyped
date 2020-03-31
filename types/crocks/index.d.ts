@@ -8,6 +8,7 @@ export * from './Any';
 export * from './Arrow';
 export * from './Assign';
 export * from './Async';
+export * from './combinators'
 export * from './Const';
 export * from './Either';
 export * from './Endo';
